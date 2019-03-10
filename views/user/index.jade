@@ -1,0 +1,30 @@
+doctype
+html
+    head
+        title= title
+        link(href='/styles/style.css', rel='stylesheet')
+    body
+        h3 List of Users
+
+        table(class='gridtable')
+            tr
+                th(class='id') Id
+                th(class='name') Name
+                th(class='email') Email
+                th(class='age') Age
+                th(class='edit') Edit
+                th(class='delete') Delete
+            each item in users
+                tr
+                    td
+                        a(href='/user/details/#{item.id}') #{item.id}
+                    td #{item.name}
+                    td #{item.email}
+                    td #{item.age}
+                    td
+                        a(href='/user/edit/#{item.id}') Edit
+                    td
+                        a(href='/user/delete/#{item.id}') Delete
+        p
+        #menu
+            a(href='/user/create')  Create New User

@@ -1,0 +1,29 @@
+.id{
+    width: 30px;
+    text-align: left;
+}
+
+.name{
+    width: 125px;
+    text-align: left;
+}
+
+.email{
+    width: 200px;
+    text-align: left;
+}
+
+.age{
+    width: 60px;
+    text-align: left;
+}
+
+.edit{
+    width: 50px;
+    text-align: left;
+}
+
+.delete{
+    width: 50px;
+    text-align: left;
+}

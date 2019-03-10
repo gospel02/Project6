@@ -1,0 +1,15 @@
+doctype
+html
+    head
+        title Edit Existing User
+        link(rel='stylesheet', href="/styles/style.css")
+    body
+        h3 Edit User
+        form(id='form', method='post', action='/user/edit/#{user.id}')
+            label(for='name') Name
+            input(type='text', id='name', name='name', value='#{user.name}')
+            label(for='email') Email
+            input(type='email', id='email', name='email', value='#{user.email}')
+            label(for='age') Age
+            input(type='number', id='age', name='age', value='#{user.age}')
+            input(type='submit', value='Update User')

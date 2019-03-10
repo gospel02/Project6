@@ -1,0 +1,19 @@
+doctype
+html
+    head
+        title Add New User
+        link(rel='stylesheet', href="/styles/style.css")
+    body
+        h3 Create New User
+        form(id='form', method='post', action='/user/create')
+            label(for='name') Name:
+            input(type='text', id='name', name='name')
+            label(for='email') Email:
+            input(type='email', id='email', name='email')
+            label(for='age') Age:
+            input(type='number', id='age', name='age')
+            input(type='submit', value='Add User')
+
+        p
+        #menu
+            a(href='/user') List of Users
