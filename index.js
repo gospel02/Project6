@@ -3,15 +3,15 @@ const path = require('path');
 const fs = require('fs');
 const bodyParser = require('body-parser');
 const methodOverride = require('method-override');
-const user = require('./routes/user.js');
+let user = require('./routes/user.js');
 
 
-const app = express();
+let app = express();
 
 app.set('views', __dirname + '/views');
 app.set('view engine', 'jade');
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(methodOverride('_method'));
+app.use(methodOverride('_method'))
 app.use(express.static(path.join(__dirname, 'public')));
 
 

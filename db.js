@@ -1,5 +1,5 @@
-const userDb = {};
-const id_inc = 0;
+let userDb = {};
+let id_inc = 0;
 
 exports.listUsers = function(){
     return userDb;

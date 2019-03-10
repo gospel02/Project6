@@ -1,8 +1,8 @@
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
-const util = require('util');
-const db = require('../db.js');
+let util = require('util');
+let db = require('../db.js');
 const fs = require('fs');
 const userFile = './userFile.txt';
 
@@ -27,6 +27,7 @@ exports.createUser = function(req, res){
         }
     })
 };
+
 
 exports.details = function (req, res) {
     var user = db.getUserById(req.params.id);
